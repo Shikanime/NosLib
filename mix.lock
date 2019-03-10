@@ -1,3 +1,4 @@
 %{
   "recase": {:hex, :recase, "0.4.0", "8fb52846f75948156385af2dfdc12f69e5ce27b022a9d1682c70a2fb3ed149c7", [:mix], [], "hexpm"},
+  "uuid": {:hex, :uuid, "1.1.8", "e22fc04499de0de3ed1116b770c7737779f226ceefa0badb3592e64d5cfb4eb9", [:mix], [], "hexpm"},
 }

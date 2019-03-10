@@ -1,6 +1,6 @@
 defmodule NosLib.SignInPacket do
   @moduledoc """
-  First SignInRequest packet.reply by the client
+  Initial packet to login the user
   """
 
   defstruct user_name: nil,

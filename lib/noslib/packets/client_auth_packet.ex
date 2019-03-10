@@ -1,6 +1,7 @@
 defmodule NosLib.ClientAuthPacket do
   @moduledoc """
-  First SignInRequest packet.reply by the client
+  Initial packet to the world server which content the
+  client ID
   """
 
   defstruct client_id: "",
@@ -15,7 +16,7 @@ defmodule NosLib.ClientAuthPacket do
   def parse(payload) do
     %__MODULE__{
       client_id: parse_client_id(payload),
-      session_id: UUID.uuid5(:nil, payload)
+      session_id: UUID.uuid5(nil, payload)
     }
   end
 

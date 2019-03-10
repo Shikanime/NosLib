@@ -1,6 +1,7 @@
 defmodule NosLib.UsernamePacket do
   @moduledoc """
-  First UsernameRequest packet.reply by the client
+  First world type packet to identify the user's
+  name
   """
 
   defstruct user_name: nil

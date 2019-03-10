@@ -20,6 +20,7 @@ defmodule NosLib.MixProject do
   defp deps do
     [
       {:recase, "~> 0.4"},
+      {:uuid, "~> 1.1"}
     ]
   end
 end

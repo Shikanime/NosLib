@@ -1,5 +1,10 @@
 defmodule NosLib.AuthentificationView do
-  def render(:sign_in, params) do
+  @moduledoc """
+  Responses from the login server
+  """
+
+  @spec render(String.t, map()) :: String.t
+  def render("sign_in", params) do
     """
     NsTeST \
     #{Recase.to_snake(params.user_name)} \
@@ -8,15 +13,15 @@ defmodule NosLib.AuthentificationView do
     """
   end
 
-  def render(:outdated_client, _params), do: "failc 1"
-  def render(:error, _params), do: "failc 2"
-  def render(:maintenance, _params), do: "failc 3"
-  def render(:session_already_used, _params), do: "failc 4"
-  def render(:unvalid_credential, _params), do: "failc 5"
-  def render(:cant_login, _params), do: "failc 6"
-  def render(:user_blacklisted, _params), do: "failc 7"
-  def render(:country_blacklisted, _params), do: "failc 8"
-  def render(:check_case, _params), do: "failc 9"
+  def render("outdated_client", _params), do: "failc 1"
+  def render("error", _params), do: "failc 2"
+  def render("maintenance", _params), do: "failc 3"
+  def render("session_already_used", _params), do: "failc 4"
+  def render("unvalid_credential", _params), do: "failc 5"
+  def render("cant_login", _params), do: "failc 6"
+  def render("user_blacklisted", _params), do: "failc 7"
+  def render("country_blacklisted", _params), do: "failc 8"
+  def render("check_case", _params), do: "failc 9"
   def render(_type, _params), do: "failc 10"
 
   defp render_worlds(worlds) do

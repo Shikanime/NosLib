@@ -1,12 +1,14 @@
 defmodule NosLib.PasswordPacket do
   @moduledoc """
-  First PasswordRequest packet.reply by the client
+  Second wolrd type packet after UsernamePacket
+  used to confirm the context switch between the
+  login server and the world
   """
 
   defstruct user_password_hash: nil
 
   @type t :: %__MODULE__{
-          user_password_hash: String.t(),
+          user_password_hash: String.t()
         }
 
   @spec parse(binary) :: t
